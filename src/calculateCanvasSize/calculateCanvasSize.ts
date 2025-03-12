@@ -6,11 +6,10 @@ export default function calculateCanvasSize(
   const numLength = parseInt(length);
   const numWidth = parseInt(width);
 
-  // Check if either input is 0 and throw an error
+  // Check if either input is zero and throw an error
   if (numLength === 0 || numWidth === 0) {
     throw new Error("Invalid input");
   }
 
   return numLength * numWidth;
 }
-
