@@ -10,7 +10,11 @@ describe("paintRequiredCalculator", () => {
   test("should throw an error when area is zero", () => {
     expect(() => paintRequiredCalculator(0, 10)).toThrow("Invalid input");
   });
-  test.todo("To check when coverage is zero, it should return Invalid input");
+
+  test("should throw an error when coverage is zero", () => {
+    expect(() => paintRequiredCalculator(50, 0)).toThrow("Invalid input");
+  });
+
   test.todo("To check when area is negative, it should return Invalid input");
   test.todo("To check when coverage is negative, it should return Invalid input");
   test.todo("To check when both area and coverage are negative, it should return Invalid input");
