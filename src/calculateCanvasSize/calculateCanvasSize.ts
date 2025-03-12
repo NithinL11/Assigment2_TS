@@ -2,10 +2,15 @@ export default function calculateCanvasSize(
   length: string,
   width: string
 ) {
-  if (parseInt(length) === 0) {
+  // Convert inputs to integers
+  const numLength = parseInt(length);
+  const numWidth = parseInt(width);
+
+  // Check if either input is 0 and throw an error
+  if (numLength === 0 || numWidth === 0) {
     throw new Error("Invalid input");
   }
 
-  return parseInt(length) * parseInt(width);
+  return numLength * numWidth;
 }
 
