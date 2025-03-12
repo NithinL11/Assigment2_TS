@@ -26,6 +26,8 @@ describe("calculateCanvasSize", () => {
   test("returns Invalid input when first input is non-numeric (abc) and second input is 5", () => {
     expect(() => calculateCanvasSize("abc", "5")).toThrow("Invalid input");
   });
-  test.todo("To check when non numeric input is given 5 and abc give error meassge as Invalid input");
+  test("returns Invalid input when second input is non-numeric (abc) and first input is 5", () => {
+    expect(() => calculateCanvasSize("5", "abc")).toThrow("Invalid input");
+  });
 });
  
