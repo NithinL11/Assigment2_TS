@@ -1,12 +1,15 @@
 import calculateCanvasSize from "./calculateCanvasSize";
 
 describe("calculateCanvasSize", () => {
+  
   test("returns correct result", () => {
     const result = calculateCanvasSize("10", "100");
-
     expect(result).toEqual(1000);
   });
-  test.todo("To check giving first input as 0 and sencond as  100 it should return invalid input");
+
+  test("returns Invalid input when first input is zero", () => {
+    expect(() => calculateCanvasSize("0", "100")).toThrow("Invalid input");
+  });
   test.todo("To check giving first input as 50 and sencond as  0 it should retun Invalid input");
   test.todo("To check negative number is not valid give first input as -10 and second input as 5 it should return -50");
   test.todo("To check when negative number is added to both number -10 and -5 it should return 50");
